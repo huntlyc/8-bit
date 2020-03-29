@@ -12,10 +12,12 @@ const Card = styled.article`
       transform: scale(1.025);
     }
   }
-
+  h2{
+    color: var(--mainFontColor);
+  }
   a {
     text-decoration: none;
-    color: var(--dark);
+    color: var(--secondaryFontColor);
   }
   .card-image {
     height: 450px;
@@ -49,7 +51,6 @@ const PostCard = ({ post }) => {
         <h2>{title}</h2>
         <p>{post.excerpt}</p>
         <Meta>
-          <h4>Written by {author}</h4>
           <h4>Posted on {date}</h4>
           <div className="btn">Read Article</div>
         </Meta>

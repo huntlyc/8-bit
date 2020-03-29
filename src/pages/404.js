@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 const Error = () => {
   return (
     <Layout>
-      <h1>This page has disappeared</h1>
+      <h1>$(YourRequestedPage) &2> /dev/null</h1>
       <Link className="btn" to="/">
         Return Home
       </Link>

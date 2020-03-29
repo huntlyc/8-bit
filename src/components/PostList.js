@@ -11,12 +11,9 @@ const List = styled.div`
 `
 
 const PostList = ({ posts }) => {
-  console.log(posts)
   return (
     <>
       <section>
-        <h1>Koop</h1>
-        <h2>A personal blog template that uses GatsbyJS and MDX.</h2>
         <List>
           {posts.map(({ node }, index) => {
             return <PostCard key={index} post={node} />

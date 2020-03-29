@@ -11,22 +11,24 @@ const PostTemplate = ({ data }) => {
   return (
     <Layout>
       <section>
-        <Link className="btn" to="/">
+        <Link className="btn btn--back" to="/">
           Back to all posts
         </Link>
         <div>
           <h1>{title}</h1>
           <h4>
-            <span>Written by {author}</span> & Posted on <span>{date}</span>
+            Posted on <span>{date}</span>
           </h4>
         </div>
         <image fluid={img} />
         <div>
           <MDXRenderer>{body}</MDXRenderer>
         </div>
-        <h4>
-          <span>Written by {author}</span> & Posted on <span>{date}</span>
-        </h4>
+        <p>
+          <Link className="btn btn--back" to="/">
+            Back to all posts
+          </Link>
+        </p>
       </section>
     </Layout>
   )
@@ -38,7 +40,7 @@ export const query = graphql`
       frontmatter {
         title
         slug
-        date(formatString: "MMMM Do, YYYY")
+        date(formatString: "Do of MMMM, YYYY")
         author
         image {
           childImageSharp {
